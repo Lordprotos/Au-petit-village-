@@ -1,0 +1,46 @@
+<div class="products-container">
+    <!-- Liste des produits -->
+    <section class="catalog" *ngIf="!product">
+        <h2>Nos Produits</h2>
+
+        <div class="filters">
+            <div class="search">
+                <input 
+                    type="text"
+                    [(ngModel)]="searchTerm"
+                    placeholder="Rechercher un produit...">                
+            </div>
+
+            <div class="sort">
+                <button (click)="sortOrder = 'asc'; sortProducts()">Prix croissant</button>
+                <button (click)="sortOrder = 'desc'; sortProducts()">Prix décroissant</button>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card" *ngFor="let p of filteredProducts">
+                <img [src]="'/assets/' + p.image" [alt]="p.name">
+                <h3>{{ p.name }}</h3>
+                <p>{{ p.description }}</p>
+                <p class="price">{{ p.price | currency:'EUR' }}</p>
+                <button class="buy-button" [routerLink]="['/products', p.id]">Voir le produit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Détails du produit -->
+    <section class="product-details" *ngIf="product">
+        <div class="product-detail-container">
+            <div class="product-image">
+                <img [src]="'/assets/' + product.image" [alt]="product.name">
+            </div>
+            <div class="product-info">
+                <h1>{{ product.name }}</h1>
+                <p class="description">{{ product.description }}</p>
+                <p class="price">{{ product.price | currency:'EUR' }}</p>
+                <button class="buy-button">Ajouter au panier</button>
+                <button class="back-button" routerLink="/products">Retour aux produits</button>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,52 @@
+// filepath: f:\Cours\Devoir\devoir-angular-village\src\app\core\footer\footer.css
+.footer {
+    background-color: #F9D0A3;
+    padding: 2rem 0;
+    margin-top: auto;
+    border-top: 2px solid #D4A373;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-links h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #D4A373;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .social-icons {
+        gap: 1.5rem;
+    }
+}

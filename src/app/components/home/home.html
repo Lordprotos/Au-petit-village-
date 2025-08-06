@@ -1,0 +1,32 @@
+<section class="presentation">
+    <h1>Bienvenue Au Petit Village</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident quas sapiente ab error veritatis magnam, ducimus inventore facilis unde tempora non quisquam molestiae et nulla dolorum sunt ipsa quia. Dignissimos.</p>
+</section>
+
+<section class="catalog">
+    <h2>Nos Produits</h2>
+
+    <div class="filters">
+        <div class="search">
+            <input 
+                type="text"
+                [(ngModel)]="searchTerm"
+                placeholder="Rechercher un produit...">                
+        </div>
+
+        <div class="sort">
+            <button (click)="sortOrder = 'asc'; sortProducts()">Prix croissant</button>
+            <button (click)="sortOrder = 'desc'; sortProducts()">Prix décroissant</button>
+        </div>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-card" *ngFor="let product of filteredProducts">
+            <img [src]="'/assets/' + product.image" [alt]="product.name">
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.description }}</p>
+            <p class="price">{{ product.price | currency:'EUR' }}</p>
+            <button class="buy-button" [routerLink]="['/products', product.id]">Voir le produit</button>
+        </div>
+    </div>
+</section>
