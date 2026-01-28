@@ -11,5 +11,22 @@ export const routes: Routes = [
     { path: 'products/:id', component: Products },
     { path: 'contact', component: Contact },
     { path: 'about', component: About },
+    // Pages légales
+    { 
+        path: 'mentions-legales', 
+        loadComponent: () => import('./components/legal/mentions-legales/mentions-legales').then(m => m.MentionsLegales) 
+    },
+    { 
+        path: 'donnees-personnelles', 
+        loadComponent: () => import('./components/legal/donnees-personnelles/donnees-personnelles').then(m => m.DonneesPersonnelles) 
+    },
+    { 
+        path: 'accessibilite', 
+        loadComponent: () => import('./components/legal/accessibilite/accessibilite').then(m => m.Accessibilite) 
+    },
+    { 
+        path: 'cookies', 
+        loadComponent: () => import('./components/legal/cookies/cookies').then(m => m.Cookies) 
+    },
     { path: '**', redirectTo: '' }
 ];

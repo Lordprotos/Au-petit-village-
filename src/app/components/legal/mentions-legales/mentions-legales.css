@@ -1,0 +1,27 @@
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.legal-container h1 {
+    color: var(--secondary-blue);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-family);
+}
+
+.legal-content {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 73, 124, 0.1);
+    border-left: 4px solid var(--primary-blue);
+}
+
+.legal-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}

@@ -1,19 +1,46 @@
 <footer class="footer">
     <div class="footer-content">
-        <div class="social-links">
-            <h3>Suivez-nous</h3>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
+        <div class="footer-sections">
+            <div class="contact-section">
+                <h3>Contactez-nous</h3>
+                <div class="contact-info">
+                    <p><strong>Au Petit Village - Antenne Lyon</strong></p>
+                    <p>101 cours Charlemagne<br>
+                       CS 20033<br>
+                       69269 LYON CEDEX 02<br>
+                       France</p>
+                    <p><i class="fas fa-phone"></i> +33 (0)4 26 73 40 00</p>
+                </div>
+            </div>
+
+            <div class="social-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h3>Informations légales</h3>
+                <nav class="legal-menu">
+                    <a [routerLink]="['/mentions-legales']">Mentions légales</a>
+                    <a [routerLink]="['/donnees-personnelles']">Données personnelles</a>
+                    <a [routerLink]="['/accessibilite']">Accessibilité</a>
+                    <a [routerLink]="['/cookies']">Cookies</a>
+                </nav>
             </div>
         </div>
-        <p class="copyright">&copy; 2024 Au Petit Village. Tous droits réservés.</p>
+        
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 Au Petit Village. Tous droits réservés.</p>
+        </div>
     </div>
 </footer>

@@ -1,52 +1,103 @@
-// filepath: f:\Cours\Devoir\devoir-angular-village\src\app\core\footer\footer.css
 .footer {
-    background-color: #F9D0A3;
-    padding: 2rem 0;
+    background-color: var(--secondary-blue);
+    padding: 3rem 0 1rem 0;
     margin-top: auto;
-    border-top: 2px solid #D4A373;
+    border-top: 3px solid var(--accent-green);
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    padding: 0 2rem;
 }
 
-.social-links h3 {
-    color: #333;
-    margin-bottom: 1rem;
+.footer-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-section h3,
+.social-section h3,
+.legal-section h3 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
     font-size: 1.2rem;
+    font-family: var(--font-family);
+}
+
+.contact-info p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.contact-info i {
+    color: var(--accent-green);
+    margin-right: 0.5rem;
 }
 
 .social-icons {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
 }
 
 .social-icons a {
-    color: #333;
+    color: var(--text-light);
     font-size: 1.5rem;
     transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .social-icons a:hover {
-    color: #D4A373;
+    color: var(--accent-green);
+    background-color: rgba(130, 184, 100, 0.2);
     transform: translateY(-3px);
 }
 
+.legal-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.legal-menu a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.legal-menu a:hover {
+    color: var(--accent-green);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    text-align: center;
+}
+
 .copyright {
-    color: #666;
+    color: #ccc;
     font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
+    .footer-sections {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
     .footer {
-        padding: 1.5rem 0;
+        padding: 2rem 0 1rem 0;
     }
     
     .social-icons {
-        gap: 1.5rem;
+        justify-content: center;
     }
 }

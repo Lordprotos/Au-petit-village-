@@ -1,6 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-    background-color: #F9D0A3;
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Palette de couleurs principale */
+  --primary-blue: #007c47;
+  --secondary-blue: #00497c;
+  --dark-gray: #384050;
+  --accent-red: #cd2c2e;
+  --accent-green: #82b864;
+  --light-gray: #f1f8fc;
+  
+  /* Couleurs de texte */
+  --text-primary: #384050;
+  --text-secondary: #666;
+  --text-light: #fff;
+  
+  /* Couleurs de fond */
+  --bg-primary: #f1f8fc;
+  --bg-secondary: #fff;
+   --bg-accent: #e6f3ff; 
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-accent) 100%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+p, span, div {
+  font-family: var(--font-family);
+}
+
+.font-light { font-weight: 300; }
+.font-regular { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
